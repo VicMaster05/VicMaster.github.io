@@ -1,0 +1,325 @@
+<html>
+<head>
+<title>Início</title>
+<meta charset="utf-8"/>
+</head>
+
+<style>
+body {
+	background-color: #3a4482;
+	margin: 0 0 0;
+	overflow: auto;
+}
+
+#menu {
+	background-color: white;
+	height: 20%;
+	width: 100%;
+	display: table;
+}
+
+.menuitens {
+	width: 18%;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	margin-right: 1.66%;
+	color: #db8e00;
+	display: table-cell;
+}
+
+.logolojamenu {
+	width: 18%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	display: table-cell;
+}
+
+.logoloja {
+	max-height: 18%;
+}
+
+.a:hover {
+	color: #3a4482;
+	border-bottom: 4px solid #db8e00;
+}
+
+.principal {
+	width: 90%;
+	height: 95%;
+	margin: 2% auto 2%;
+	background-color: white;
+	display: none;
+}
+
+.submenu {
+	width: 100%;
+	text-transform: uppercase;
+	color: #db8e00;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.colunaorcamento {
+	float: left;
+	width: 45%;
+	height: 100%;
+	margin-left: 2.5%;
+	margin-right: 2.5%
+}
+
+.divcolunas {
+	width: 100%;
+	display: table;
+}
+
+.texto {
+	background-color: #3a4482;
+    width: 100%;
+    height: 100%;
+	color: #db8e00;
+}
+
+::placeholder {
+	color: #db8e00;
+	padding-left: 5;
+}
+
+textarea {
+	width: 100% !important;
+	height: 200px;
+	margin-left: 0;
+	margin-right: 0;
+	display: block;
+	overflow: auto;
+	background-color: #3a4482;
+}
+
+.logolojamenu {
+	width: 20%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	padding-left: 1%;
+	text-align: left;
+	vertical-align: middle;
+	text-transform: uppercase;
+	display: table-cell;
+}
+
+#menumobile {
+	background-color: white;
+	height: 40%;
+	width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+.colunaorcamento {
+	float: none;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.texto {
+    width: 100%;
+}
+
+.principal {
+	height: 150%;
+}
+
+.menuitens {
+	width: 100%;
+	height: 100%;
+	font-size: 10px;
+}
+
+.logoloja {
+	max-height: 20%;
+}
+}
+
+</style>
+
+<body>
+<div id="menu">
+<div  class="logolojamenu" onclick="inicio()" style= "margin-left: 1.66%">
+<img class="logoloja" src="https://bibliotecadededalo.files.wordpress.com/2019/09/logo.png">
+</div>
+<div id = "orcamentos" onclick="abrirorcamentos()" class="menuitens a"><a>orçamentos</a></div>
+<div id = "catalogo" onclick="abrircatalogo()" class="menuitens a"><a>produtos</a></div>
+<div id = "servicos" onclick="abrirservicos()" class="menuitens a"><a>serviços</a></div>
+<div id = "contato" onclick="abrircontato()" class="menuitens a"><a>contato</a></div>
+</div>
+
+<div id="menumobile">
+<div  class="logolojamenu">
+<img class="logoloja" src="https://bibliotecadededalo.files.wordpress.com/2019/09/logo.png">
+</div>
+
+<div style="width: 50%; height: 40%; float: left">
+<div id = "orcamentos" class="menuitens"><p>orçamentos</p></div>
+<div id = "produtos" class="menuitens"><p>produtos</p></div>
+</div>
+
+<div style="width: 50%; height: 40%; float: left">
+<div id = "servicos" class="menuitens"><p>serviços</p></div>
+<div id = "contato" class="menuitens"><p>contato</p></div>
+</div>
+</div>
+
+
+<div id="orçamento" class="principal">
+<div class="submenu" style=" color: #3a4482; border-bottom: 2px solid #db8e00; margin-bottom: 2%">novo orçamento</div>
+
+<div>
+<div class="divcolunas">
+<div class="colunaorcamento">
+<div class="divcolunas">
+
+<div class="colunaorcamento">
+<h4 style="text-align: center; margin-bottom: 2%">Dados do veículo</h4>
+<div style="margin-bottom: 2%">
+<label style="display: inline-block;">Modelo</label>
+<br>
+<input class="texto" size="20" placeholder="Corolla XEI">
+</div>
+
+<div style="margin-bottom: 2%">
+<label style="display: inline-block;">Motor</label>
+<br>
+<input class="texto" size="20" placeholder="2.0 16V">
+</div>
+
+<div style="margin-bottom: 2%">
+<label style="display: inline-block;">Ano</label>
+<br>
+<input class="texto" size="20" placeholder="2015">
+</div>
+
+<div style="margin-bottom: 2%">
+<label style="display: inline-block;">Km</label>
+<br>
+<input class="texto" size="20" placeholder="82000">
+</div>
+
+<div>
+<label style="display: inline-block;">Combustivel</label>
+<div style="display: block">
+<input checked type="radio" style="margin-bottom: 1%">Gasolina<br>
+<input type="radio" style="margin-bottom: 1%">Etanol<br>
+<input type="radio" style="margin-bottom: 1%">Flex<br>
+<input type="radio" style="margin-bottom: 1%">Diesel<br>
+<input type="radio" style="margin-bottom: 1%">GNV<br>
+</div>
+</div>
+</div>
+
+<div class="colunaorcamento">
+<h4 style="text-align: center; margin-bottom: 2%">Seus dados</h4>
+
+<div style="margin-bottom: 2%">
+<label style="display: inline-block;">Nome Completo</label>
+<br>
+<input class="texto" size="20" placeholder="José Antônio Lima da Silva">
+</div>
+
+<div style="margin-bottom: 2%">
+<label style="display: inline-block;">Telefone</label>
+<br>
+<input class="texto" size="20" placeholder="(85) 91234-5678">
+</div>
+
+<div style="margin-bottom: 2%">
+<label style="display: inline-block;">Email</label>
+<br>
+<input class="texto" size="20" placeholder="123456789@gmail.com">
+</div>
+</div>
+</div>
+</div>
+
+<div class="colunaorcamento">
+<h4 style="text-align: center; margin-bottom: 2%">Peças para orçamento</h5>
+<textarea placeholder="Rolamento dianteiro&#10;Disco de freio&#10;Troca de Óleo&#10;Amortecedores&#10;Bomba d'água"></textarea>
+<div style="text-align: center; margin-top: 3%">
+<button>Enviar</button>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="itens" class="principal">
+<div class="submenu" style=" color: #3a4482; border-bottom: 2px solid #db8e00; margin-bottom: 2%">Lista de Produtos</div>
+<h4 style="text-align: center; margin-bottom: 2%">Abaixo se encontra a lista de todos os produtos</h4>
+</div>
+
+<div id="oficina" class="principal">
+<div class="submenu" style=" color: #3a4482; border-bottom: 2px solid #db8e00; margin-bottom: 2%">Oficina</div>
+<h4 style="text-align: center; margin-bottom: 2%">Agende seu serviço em nossa oficina</h4>
+</div>
+
+<div id="contatos" class="principal">
+<div class="submenu" style=" color: #3a4482; border-bottom: 2px solid #db8e00; margin-bottom: 2%">Contato</div>
+<h4 style="text-align: center; margin-bottom: 2%">Fale conosco pelos canais abaixo</h4>
+<h4 style="text-align: center; margin-bottom: 2%">Telefone: (85) 99999-0618<br>(85)3023-7990</h4>
+<h4 style="text-align: center; margin-bottom: 2%">Email: kadillakauto@hotmail.com</h4>
+</div>
+
+</body>
+
+<script>
+if (screen.width < 900) {
+document.getElementById("menu").style.display = "none";
+document.getElementById("menumobile").style.display = "table";
+
+}
+
+else{
+document.getElementById("menu").style.display = "table";
+document.getElementById("menumobile").style.display = "none";
+}
+
+function inicio() {
+document.getElementById("orçamento").style.display = "none";
+document.getElementById("itens").style.display = "none";
+document.getElementById("oficina").style.display = "none";
+document.getElementById("contatos").style.display = "none";
+}
+
+function abrirorcamentos() {
+document.getElementById("orçamento").style.display = "block";
+document.getElementById("itens").style.display = "none";
+document.getElementById("oficina").style.display = "none";
+document.getElementById("contatos").style.display = "none";
+}
+
+function abrircatalogo() {
+document.getElementById("orçamento").style.display = "none";
+document.getElementById("itens").style.display = "block";
+document.getElementById("oficina").style.display = "none";
+document.getElementById("contatos").style.display = "none";
+}
+
+function abrirservicos() {
+document.getElementById("orçamento").style.display = "none";
+document.getElementById("itens").style.display = "none";
+document.getElementById("oficina").style.display = "block";
+document.getElementById("contatos").style.display = "none";
+}
+
+function abrircontato() {
+document.getElementById("orçamento").style.display = "none";
+document.getElementById("itens").style.display = "none";
+document.getElementById("oficina").style.display = "none";
+document.getElementById("contatos").style.display = "block";
+}
+</script>
+
+</html>
